@@ -1,21 +1,34 @@
 .main_layout{
+    /* max-width: 800px; */
+    margin: auto;
+    width: 21cm;
     display: grid;
-    grid-template-areas: 
-        "header header"
-        "sidebar content"
+    gridtemplate-columns: repeat(9, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:
+        "header_left header_right"
+        "side main"
         "footer footer";
-    grid-template-columns: 1fr 3fr;
     gap: 20px;
 }
 
-header{
-    grid-area: header;
+.left_header{
+    grid-area: header_left;
+}
+
+.right_header{
+    grid-area: header_right;
 }
 
 .side_content{
-    grid-area: sidebar;
+    grid-area: side;
 }
 
 .main_content{
-    grid-area: content;
+    grid-area: main;
+}
+
+.title_left{
+    font-style: normal;
+    color: mediumseagreen;
 }
